@@ -1,0 +1,252 @@
+<html>
+<head>
+
+	<script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"  crossorigin="anonymous">
+<link href="https://beta.nicheincomeguide.com/media/com_niche/dist/vendors/datatable/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+<link href="https://beta.nicheincomeguide.com/media/com_niche/dist/vendors/datatable/buttons/css/buttons.bootstrap4.css" rel="stylesheet"
+<link href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/flatly/bootstrap.min.css" integrity="sha384-mhpbKVUOPCSocLzx2ElRISIORFRwr1ZbO9bAlowgM5kO7hnpRBe+brVj8NNPUiFs" crossorigin="anonymous">
+
+    <style>
+        .modal-dialog-slideout {min-height: 100%; margin: 0 0 0 auto;background: #fff;}
+        .modal.fade .modal-dialog.modal-dialog-slideout {-webkit-transform: translate(100%,0)scale(1);transform: translate(100%,0)scale(1);}
+        .modal.fade.show .modal-dialog.modal-dialog-slideout {-webkit-transform: translate(0,0);transform: translate(0,0);display: flex;align-items: stretch;-webkit-box-align: stretch;height: 100%;}
+        .modal.fade.show .modal-dialog.modal-dialog-slideout .modal-body{overflow-y: auto;overflow-x: hidden;}
+        .modal-dialog-slideout .modal-content{border: 0;}
+        .modal-dialog-slideout .modal-header, .modal-dialog-slideout .modal-footer {height: 69px; display: block;}
+        .modal-dialog-slideout .modal-header h5 {float:left;}
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+<div class="row">
+    <div class="col-12">
+<h2>Niche Selection Tool</h2>
+
+<select id="activeNicheSelection" class="form-control"></select>
+
+<hr />
+<h3>Table Niche List</h3>
+
+<table class="display table dataTable table-striped table-bordered" id="nicheListTable" style="width:100%;">
+    <thead class="bg-dark">
+    <tr class="text-white">
+        <th data-field="name">Niche</th>
+        <th data-field="domain">Domain</th>
+        <th data-field="id" data-formatter="options">Options</th>
+    </tr>
+    </thead>
+</table>
+
+        <hr />
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#brandPlanList">
+            View Brand Plans
+        </button>
+        <hr />
+
+    </div>
+
+<div class="col-12">
+
+
+
+	</div>
+
+    <hr />
+
+
+    <div class="col-12">
+
+        <h2>Ideation from Brand Plan</h2>
+
+        <!-- IDEATION :: LIST DISPLAY :: WIDGET :: -->
+        <table class="display table dataTable table-striped table-bordered" id="ideationListTable" style="width:100%;">
+            <thead class="bg-dark">
+            <tr class="text-white">
+                <th data-field="search_query">Primary Search Query</th>
+                <th data-field="brand_plan">Brand Plan</th>
+                <th data-field="niche">Niche</th>
+                <th data-field="id" data-formatter="options">Options</th>
+            </tr>
+            </thead>
+        </table>
+
+
+    </div>
+
+</div>
+
+<hr />
+<!-- brand plan holder modal -->
+    <div class="modal fade" id="brandPlanList" tabindex="-1" role="dialog" aria-labelledby="brandPlanList" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-slideout modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Brand Plans</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">Close</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <table class="display table dataTable table-striped table-bordered" id="brandPlanListTable" style="width:100%;">
+                        <thead class="bg-dark">
+                        <tr class="text-white">
+                            <th data-field="name">Category</th>
+                            <th data-field="domain">Estimated Post</th>
+                            <th data-field="id" data-formatter="options">Options</th>
+                        </tr>
+                        </thead>
+                    </table>
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <hr />
+<br><br>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Convert Modal to Slide-out Panel From Right with Fixed Header and Footer</h1>
+            <p>First two examples already available in Bootstrap V4. It's super simple and just add class and it will convert as super side out the panel. Yes, It's Responsive. :)</p>
+            <p>To view more samples Visit <a href="https://bootsnipp.com/pradeep330">Here</a></a></p>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
+                Launch demo modal sideout small
+            </button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">
+                Launch demo modal sideout normal
+            </button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal3">
+                Launch demo modal sideout large
+            </button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal4">
+                Overflow
+            </button>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-slideout modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal sideout small</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-slideout" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal sideout normal</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-slideout modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal sideout large</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel4" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-slideout modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal sideout small</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Explore the history of the classic Lorem Ipsum passage and generate your own text using any number of characters, words, sentences or paragraphs. Commonly used as placeholder text in the graphic and print industries, Lorem Ipsum's origins extend far back to a scrambled Latin passage from Cicero in the middle ages.</p>
+                <p>Explore the history of the classic Lorem Ipsum passage and generate your own text using any number of characters, words, sentences or paragraphs. Commonly used as placeholder text in the graphic and print industries, Lorem Ipsum's origins extend far back to a scrambled Latin passage from Cicero in the middle ages.</p>
+                <p>Explore the history of the classic Lorem Ipsum passage and generate your own text using any number of characters, words, sentences or paragraphs. Commonly used as placeholder text in the graphic and print industries, Lorem Ipsum's origins extend far back to a scrambled Latin passage from Cicero in the middle ages.</p>
+                <p>Explore the history of the classic Lorem Ipsum passage and generate your own text using any number of characters, words, sentences or paragraphs. Commonly used as placeholder text in the graphic and print industries, Lorem Ipsum's origins extend far back to a scrambled Latin passage from Cicero in the middle ages.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://beta.nicheincomeguide.com/media/com_niche/dist/vendors/jquery/jquery-3.3.1.min.js" ></script>
+<script src="https://beta.nicheincomeguide.com/media/com_niche/dist/vendors/datatable/js/jquery.dataTables.min.js" ></script>
+<script src="https://beta.nicheincomeguide.com/media/com_niche/dist/vendors/datatable/js/dataTables.bootstrap4.min.js" ></script>
+<script src="https://beta.nicheincomeguide.com/media/com_niche/dist/vendors/datatable/jszip/jszip.min.js" ></script>
+<script src="https://beta.nicheincomeguide.com/media/com_niche/dist/vendors/datatable/pdfmake/pdfmake.min.js" ></script>
+<script src="https://beta.nicheincomeguide.com/media/com_niche/dist/vendors/datatable/pdfmake/vfs_fonts.js" ></script>
+<script src="https://beta.nicheincomeguide.com/media/com_niche/dist/vendors/datatable/buttons/js/dataTables.buttons.min.js" ></script>
+<script src="https://beta.nicheincomeguide.com/media/com_niche/dist/vendors/datatable/buttons/js/buttons.bootstrap4.min.js" ></script>
+<script src="https://beta.nicheincomeguide.com/media/com_niche/dist/vendors/datatable/buttons/js/buttons.colVis.min.js" ></script>
+<script src="https://beta.nicheincomeguide.com/media/com_niche/dist/vendors/datatable/buttons/js/buttons.flash.min.js" ></script>
+<script src="https://beta.nicheincomeguide.com/media/com_niche/dist/vendors/datatable/buttons/js/buttons.html5.min.js" ></script>
+<script src="https://beta.nicheincomeguide.com/media/com_niche/dist/vendors/datatable/buttons/js/buttons.print.min.js" ></script>
+<script src="https://beta.nicheincomeguide.com/media/com_niche/dist/js/datatable.script.js" ></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd" crossorigin="anonymous"></script>
+
+<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+<script src="application.js"></script>
+
+</body>
+</head>
