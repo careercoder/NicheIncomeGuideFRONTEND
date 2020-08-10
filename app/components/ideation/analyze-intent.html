@@ -1,0 +1,141 @@
+<div class="row" style="padding: 0 0 0px 0;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary btn-block">
+        <a class="navbar-brand text-white" href="#">Competition Analysis</a>
+            <a href="#" data-toggle="tooltip" title="Based on Top 10 Results">[?]</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto" >
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2 hidden" type="hidden" placeholder="Search" aria-label="Search">
+                <button class="btn btn-link my-2 my-sm-0" style="font-size:1rem;" type="submit">the search query you have selected</button>
+            </form>
+        </div>
+    </nav>
+</div>
+
+<!-- summary -->
+<div class="row">
+    <div class="col-12 col-sm-6 col-xl-3 mt-3">
+        <div class="card">
+            <div class="card-body">
+                <div class='d-flex px-0 px-lg-2 py-2 align-self-center'>
+                    <i class="icon-graph icons card-liner-icon mt-2"></i>
+                    <div class='card-liner-content'>
+                        <h2 class="card-liner-title">35</h2>
+                        <h6 class="card-liner-subtitle">Competition Score</h6>
+                    </div>
+                </div>
+                <div id="apex_today_order"></div>
+            </div>
+        </div>
+    </div><div class="col-12 col-sm-6 col-xl-3 mt-3">
+    <div class="card">
+        <div class="card-body">
+            <div class='d-flex px-0 px-lg-2 py-2 align-self-center'>
+                <i class="icon-basket icons card-liner-icon mt-2"></i>
+                <div class='card-liner-content'>
+                    <h2 class="card-liner-title">1,750</h2>
+                    <h6 class="card-liner-subtitle">Average Word Count</h6>
+                </div>
+            </div>
+            <div id="apex_today_order"></div>
+        </div>
+    </div>
+</div><div class="col-12 col-sm-6 col-xl-3 mt-3">
+    <div class="card">
+        <div class="card-body">
+            <div class='d-flex px-0 px-lg-2 py-2 align-self-center'>
+                <i class="icon-basket icons card-liner-icon mt-2"></i>
+                <div class='card-liner-content'>
+                    <h2 class="card-liner-title">5.37</h2>
+                    <h6 class="card-liner-subtitle">Avg Authority</h6>
+                </div>
+            </div>
+            <div id="apex_today_order"></div>
+        </div>
+    </div>
+</div><div class="col-12 col-sm-6 col-xl-3 mt-3">
+    <div class="card">
+        <div class="card-body">
+            <div class='d-flex px-0 px-lg-2 py-2 align-self-center'>
+                <i class="icon-basket icons card-liner-icon mt-2"></i>
+                <div class='card-liner-content'>
+                    <h2 class="card-liner-title">PILLAR POST</h2>
+                    <h6 class="card-liner-subtitle">Rank Ability</h6>
+                </div>
+            </div>
+            <div id="apex_today_order"></div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="row" style="margin-top: 1rem; padding: 0 0 0px 0;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary btn-block">
+        <a class="navbar-brand text-white" href="#">Top Search Results</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto" >
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2 hidden" type="hidden" placeholder="Search" aria-label="Search">
+                <button class="btn btn-link my-2 my-sm-0" style="font-size:1rem;" type="submit">the search query you have selected</button>
+            </form>
+        </div>
+    </nav>
+</div>
+
+<!-- SERP :: WIDGET :: -->
+<table class="display table dataTable table-striped table-bordered" id="rankingListTable" style="width:100%;">
+    <thead class="bg-dark">
+    <tr class="text-white">
+        <th data-field="search_query">Title</th>
+        <th data-field="brand_plan">Domain</th>
+        <th data-field="position">Position</th>
+        <th data-field="word_count">Word Count</th>
+        <th data-field="id" data-formatter="options">Options</th>
+    </tr>
+    </thead>
+</table>
+
+
+
+
+<div class="row" style="margin-top: 1rem; padding: 0 0 0px 0;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary btn-block">
+        <a class="navbar-brand text-white" href="#">Related Queries</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto" >
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2 hidden" type="hidden" placeholder="Search" aria-label="Search">
+                <button class="btn btn-link my-2 my-sm-0" style="font-size:1rem;" type="submit">the search query you have selected</button>
+            </form>
+        </div>
+    </nav>
+</div>
+
+
+<!-- similar queries -->
+
+<table class="display table dataTable table-striped table-bordered" id="similarSearchListTable"
+       style="width:100%;">
+    <thead class="bg-dark">
+    <tr class="text-white">
+        <th data-field="search_query">Search Query</th>
+        <th data-field="id" data-formatter="options">+</th>
+    </tr>
+    </thead>
+</table>
+
+
+
